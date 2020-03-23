@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<title>Taski do wykonania ćwiczenia - połączenie do bazy danych</title>
+	<style type="text/css">
+		.wprowadzenie,.polaczeniedb,.zapytaniadb{
+			width: 100%;
+			font-family: tahoma;
+			font-size: 18px;
+			color: black;
+			margin: 20px;
+		}
+		.task{
+			width: 1024px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 20px;
+			border: 2px solid orange;
+			border-radius: 25px;
+		}
+		.opiszadania{
+			text-align: center;
+		}
+		img{
+			width: 60%;
+			margin: 10px;
+		}
+		footer{
+			width: 100%;
+			font-family: tahoma;
+			font-size: 18px;
+			color: black;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<section class="wprowadzenie">
+		<article class="task">
+			<h1>Pobranie i instalacja programu XAMPP w Microsoft Windows</h1>
+			<p class="opiszadania">
+				1. Pobieramy i instalujemy xamppa ze strony: https://www.apachefriends.org/pl/download.html<br>
+				2. Wersja zaprezentowana do tego ćwiczenia nie ma znaczenia<br>
+				<img src="./img/Obraz1.png" alt="połączenie do bazy danych"><br>
+			</p>
+		</article>
+		<article class="task">
+			<h1>Tworzenie bazy danych</h1>
+			<p class="opiszadania">
+				1. Tworzymy nowy projekt w katalogu: C:\xampp\htdocs\Nazwa_Twojego_Projektu (np. imieinazwiskoklasa )<br> 
+				2. Uruchamiamy program "sublime text" i zapisujemy do w/w katalogu plik o nazwie index.php oraz zakładamy struktóre HTML5<br>
+				<img src="./img/Obraz2.png" alt="połączenie do bazy danych"><br>
+				3. Uruchamiany przeględarkę i na pasku url wpisujemy: http://localhost/phpmyadmin/<br>
+				4. Tworzymy pustą bazę danych o nazwie Szkola klikając polewej na "+Nowa"<br>
+				<img src="./img/Obraz3.png" alt="połączenie do bazy danych"><br>
+			</p>
+		</article>
+		<article class="task">
+			<h1>Tworzenie tabeli w bazie</h1>
+			<p class="opiszadania">
+				1. Tworzymy nową tabelę o nazwie Uczniowie z 4 kolumnami<br>
+				<img src="./img/Obraz4.png" alt="połączenie do bazy danych"><br>
+				2. Tabela posiada kolumny: IDU int zaznaczam opcje A_I, Imie varchar(50), Nazwisko varchar(50), Adres varchar(50)<br>
+				<img src="./img/Obraz5.png" alt="połączenie do bazy danych"><br>
+				3. Po wypełnieniu formularza oraz ZAZNACZENIU OPCJI A_I dla IDU (A_I - autoincrement - dla klucza podstawowego) uzyskujemy<br>
+				<img src="./img/Obraz6.png" alt="połączenie do bazy danych"><br>
+			</p>
+		</article>
+		<article class="task">
+			<h1>Dodanie do tabeli nowych rekordów</h1>
+			<p class="opiszadania">
+				1. Dodajemy 10 rekordów do tabeli "uczniowie" klikając na zakładkę "SQL" oraz wykonujemy zapytanie<br>
+				2. Wzór przykładowego zapytania: INSERT INTO Nazwa_Tabeli(NazwaKolumny1,NazwaKolumny2) values('Nazwa1','Nazwa2');<br>
+				<img src="./img/Obraz7.png" alt="połączenie do bazy danych"><br>
+				3. Wynik wykonania wstawiania 10 rekordów<br>
+				<img src="./img/Obraz8.png" alt="połączenie do bazy danych"><br>
+			</p>
+		</article>
+	</section>
+	<section class="polaczeniedb">
+		<article class="task">
+			<h1>Utworzenie skryptu - polączenie do bazy danych</h1>
+			<p class="opiszadania">
+				1. Tworzymy nowy plik "polaczenia.php" i zapisujemy go do projektu: "imieinazwiskoklasa"<br>
+				2. Zawartość polaczenia.php wraz z komentarzami - parametry połączenia<br>
+				<img src="./img/Obraz9.png" alt="połączenie do bazy danych"><br>
+				3. Sprawdzenie połączenia z bazą danych czy wszystko GRA ;) dodanie kolejnych linijek kodu<br>
+				<img src="./img/Obraz10.png" alt="połączenie do bazy danych"><br>
+				4. Sprawdzenie czy faktycznie połączenie zostało ustanowione z bazą danych<br>
+				Wpisujemy w przeglądarce internetowej: http://localhost/imieinazwiskoklasa/polaczenia.php<br>
+				<img src="./img/Obraz11.png" alt="połączenie do bazy danych"><br>
+				5.Osadzamy skrypt: "polaczenia.php" w index.php oraz zamykamy połączenie z bazą po wykonaniu skryptu<br>
+				<img src="./img/Obraz12.png" alt="połączenie do bazy danych"><br>
+				6. Sprawdzamy poprawność skryptu w index.php w przeglądarce: http://localhost/imieinazwiskoklasa/index.php<br>
+				<img src="./img/Obraz13.png" alt="połączenie do bazy danych"><br>
+			</p>
+		</article>
+	</section>
+	<section class="zapytaniadb">
+		<article class="task">
+			<h1>Pobranie rekordów z bazy</h1>
+			<p class="opiszadania">
+				1. Tworzę zapytanie w pliku index.php, które pobiera wszystkie 10 rekordów z bazy danych<br>
+				<img src="./img/Obraz14.png" alt="połączenie do bazy danych"><br>
+				2. Dane zaprezentowane w pliku index.php<br>
+				<img src="./img/Obraz15.png" alt="połączenie do bazy danych"><br>
+				3. Dane zaprezentowane są w formie tabeli - koniec ćwiczenia<br>
+				<img src="./img/Obraz16.png" alt="połączenie do bazy danych"><br>
+				<img src="./img/Obraz17.png" alt="połączenie do bazy danych"><br>
+				4. Proszę wykonać samodzielnie zadanie ale utworzyć bazę danych "Sklep" wraz z tabelą klienci IDK, imie, nazwisko,adres<br>
+				5. Wynik zadania wraz z wyeksportowaną bazą danych przesłać na email: informatyka@pszczyna.edu.pl<br>
+				6.Aby wyeksportować bazę do sql należy (oraz proszę dołączyć dokumenty: index.php oraz polaczenia.php - jako ZIP)
+				<img src="./img/Obraz18.png" alt="połączenie do bazy danych"><br>
+				7. Dziękuję za uwagę w razie pytań proszę kontakt: <i><a href="mailto:informatyka@pszczyna.edu.pl">informatyka@pszczyna.edu.pl</a></i>
+			</p>
+		</article>
+	</section>
+	<footer>
+		<fieldset>
+			<legend>Ćwiczenie dla Technik Informatyk, Technik Programista</legend>
+			Copyright by Walerasan 2020 PZSnr1 and PZSnr2
+		</fieldset>
+	</footer>
+</body>
+</html>
